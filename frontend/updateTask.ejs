@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Update Task</title>
+	
+	<link rel="stylesheet" href="/style.css" type="text/css">
+</head>
+<body>
+	
+	<div class="app-container">
+		<form action="" class="update-form">
+			<p style="text-align: center; margin-top: 20px" id="message"></p>
+			<h3>update task</h3>
+			<p>ID: <span class="product-id">44445ddgrr852s</span></p>
+			<div class="form-control">
+				<label for="update-input">description</label>
+				<input type="text" id="update-input" name="update-input">
+			</div>
+			<div class="form-control">
+				<label for="complete-input">completed</label>
+				<input type="checkbox" id="complete-input">
+			</div>
+			<input type="submit" value="update task" class="btn-update">
+		</form>
+		
+		<div style="text-align: center; margin-top: 20px;">
+			<button class="btn-show-tasks">return to tasks</button>
+		</div>
+	</div>
+	
+	<script src="/config.js"></script>
+	<script src="/update.js"></script>
+</body>
+</html>
