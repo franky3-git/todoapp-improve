@@ -1,5 +1,5 @@
 function init() {
-	const id = location.pathname.split('/')[2];
+	const id = location.pathname.split('/')[3];
 	
 	const selectedItem = getItems().find(task => task._id === id);
 	
@@ -11,7 +11,7 @@ function init() {
 init();
 
 document.querySelector('.btn-show-tasks').addEventListener('click', () => {
-	location.href = '/taskapp'
+	location.href = '/frontend'
 })
 
 const updateForm = document.querySelector('form');

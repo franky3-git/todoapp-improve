@@ -79,7 +79,7 @@ function goUpdate(e) {
 		return displayInfoMessage('You have not selected a valid task', 'error');
 	}
 	log(selectedTask)
-	location.href = '/updatetask/' + id ;
+	location.href = '/frontend/updatetask/' + id ;
 }
 
 function deleteTask(e) {

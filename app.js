@@ -1,12 +1,8 @@
 const express = require('express');
 const path = require('path');
+const frontendRoutes = require('./routes/frontendRoutes')
+const tasksRoutes = require('./routes/tasksRoutes');
 
-const tasks = [
-	{_id: 1, description: 'first task ', completed: false},
-	{_id: 2, description: 'second task ', completed: false},
-	{_id: 3, description: 'third task ', completed: false},
-	{_id: 4, description: 'fourth task ', completed: false},
-]
 
 const app = express();
 
@@ -23,19 +19,11 @@ app.get('/', (req, res) => {
 })
 
 //frontend pages
-app.get('/taskapp', (req, res) => {
-	res.render('index')
-})
-
-
-app.get('/updatetask/:id', (req, res) => {
-	res.render('updateTask')
-})
+app.use('/frontend', frontendRoutes)
 
 //task api routes
-app.get('/api/tasks', (req, res) => {
-	res.json(tasks)
-})
+app.use('/api/tasks', tasksRoutes)
+
 
 
 module.exports = app;
