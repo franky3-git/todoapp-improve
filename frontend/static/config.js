@@ -21,3 +21,5 @@ function displayInfoMessage(message, type) {
 		messageInfo.style.display = 'none';
 	}, 3000)
 }
+
+const log = console.log;

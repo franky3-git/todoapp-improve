@@ -1,7 +1,3 @@
-console.log('update page')
-
-console.log(location.pathname)
-
 function init() {
 	const id = location.pathname.split('/')[2];
 	
@@ -16,4 +12,30 @@ init();
 
 document.querySelector('.btn-show-tasks').addEventListener('click', () => {
 	location.href = '/taskapp'
+})
+
+const updateForm = document.querySelector('form');
+
+updateForm.addEventListener('submit', (e) => {
+	e.preventDefault();
+	const taskID = document.querySelector('.product-id').textContent;
+
+	let tasks = getItems();
+	let selectedItem = getItems().find(task => taskID == task._id);
+	
+	const description = document.querySelector('#update-input').value;
+	const completed = document.querySelector('#complete-input').checked;
+	
+	
+	selectedItem = {...selectedItem, description, completed};
+	
+	const newTasks = tasks.map(task => {
+		if(task._id !== selectedItem._id) {
+			return task
+		}
+		return selectedItem
+	})
+	
+	setItems(newTasks)
+	
 })

@@ -23,7 +23,6 @@ app.get('/', (req, res) => {
 })
 
 //frontend pages
-
 app.get('/taskapp', (req, res) => {
 	res.render('index')
 })

@@ -1,5 +1,3 @@
-const log = console.log;
-
 const taskForm = document.querySelector('form');
 const taskContainer = document.querySelector('.tasks-container');
 
